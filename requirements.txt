@@ -1,0 +1,54 @@
+# ==================================
+# FRAMEWORK AND ASYNCHRONOUS SERVER
+# (Recent, stable FastAPI/Uvicorn for clean ASGI support)
+# ==================================
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+
+# ==================================
+# PYDANTIC (Required by FastAPI & LangChain)
+# ==================================
+# Pydantic 2.x is stable with these settings
+pydantic==2.7.4
+pydantic-settings==2.1.0
+
+# ==================================
+# LANGCHAIN ECOSYSTEM (PINNED FOR 0.2.X STABILITY)
+# NOTE: The versions below are a known stable set for the 0.2.x line.
+# ==================================
+langchain==0.2.6
+langchain-core==0.2.17
+langchain-community==0.2.6
+langchain-text-splitters==0.2.2
+langchain-huggingface==0.0.3
+
+# ==================================
+# MODELS + TRANSFORMERS (CRITICAL FIX)
+# - These versions are compatible with each other and satisfy the necessary <1.0 bounds.
+# - IMPORTANT: You must also have torch installed separately via conda or pip install torch==2.x
+# ==================================
+transformers==4.41.2
+huggingface-hub==0.23.5
+sentence-transformers==2.7.0
+tokenizers==0.19.1  # Manually included to lock its dependency on huggingface-hub
+
+# ==================================
+# VECTOR DB
+# ==================================
+faiss-cpu==1.13.0
+
+# ==================================
+# DOCUMENT LOADING (Stable, modern versions)
+# ==================================
+PyPDF2==3.0.1
+python-docx==1.1.0
+unstructured==0.14.3
+aiofiles==23.2.1
+
+# ==================================
+# UTILITIES
+# ==================================
+python-dotenv==1.0.1
+requests==2.31.0
+tqdm==4.66.2
