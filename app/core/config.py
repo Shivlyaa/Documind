@@ -26,7 +26,7 @@ class Settings(BaseSettings):
     )
 
     LLM_MODEL: str = Field(
-        default="google/flan-t5-small",
+        default="meta-llama/Llama-3-8b-instruct",
         description="LLM model used for generating answers (provider-enabled model recommended)"
     )
 
@@ -55,3 +55,4 @@ class Settings(BaseSettings):
 
 # Created a global settings instance accessible everywhere
 settings = Settings()
+
