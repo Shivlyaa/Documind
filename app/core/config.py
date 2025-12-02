@@ -26,7 +26,7 @@ class Settings(BaseSettings):
     )
 
     LLM_MODEL: str = Field(
-        default="mistralai/Mistral-7B-Instruct-v0.3",
+        default="Qwen/Qwen2.5-72B-Instruct",
         description="LLM model used for generating answers (provider-enabled model recommended)"
     )
 
@@ -55,5 +55,6 @@ class Settings(BaseSettings):
 
 # Created a global settings instance accessible everywhere
 settings = Settings()
+
 
 
