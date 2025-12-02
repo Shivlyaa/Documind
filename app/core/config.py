@@ -26,7 +26,7 @@ class Settings(BaseSettings):
     )
 
     LLM_MODEL: str = Field(
-        default="Qwen/Qwen2.5-72B-Instruct",
+        default="Qwen/Qwen2.5-3B-Instruct",
         description="LLM model used for generating answers (provider-enabled model recommended)"
     )
 
@@ -55,6 +55,7 @@ class Settings(BaseSettings):
 
 # Created a global settings instance accessible everywhere
 settings = Settings()
+
 
 
 
