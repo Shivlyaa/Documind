@@ -8,12 +8,13 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],          # allow Framer, local dev, everything (safe for dev)
+    allow_origins=["*"],          # allow Framer, local dev, everything 
     allow_credentials=True,
-    allow_methods=["*"],          # allow POST, GET, OPTIONS, etc
+    allow_methods=["*"],          # allows POST, GET, OPTIONS, etc
     allow_headers=["*"],          # allow all headers including file uploads
 )
 
 app.include_router(upload_router, prefix="/api")
 app.include_router(ask_router, prefix="/api")
+
 
